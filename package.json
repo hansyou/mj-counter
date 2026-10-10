@@ -1,0 +1,15 @@
+{
+  "name": "mj-counter",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.10.1",
+  "scripts": {
+    "dev": "pnpm build && pnpm --parallel --filter @mj/web --filter @mj/worker dev",
+    "dev:web": "pnpm --filter @mj/web dev",
+    "dev:worker": "pnpm --filter @mj/worker dev",
+    "preview": "pnpm build && pnpm --filter @mj/worker dev",
+    "build": "pnpm --filter @mj/shared build && pnpm --filter @mj/web build",
+    "deploy": "pnpm build && pnpm --filter @mj/worker deploy",
+    "test": "pnpm --filter @mj/shared test"
+  }
+}
